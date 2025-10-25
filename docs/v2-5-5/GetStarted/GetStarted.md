@@ -31,7 +31,7 @@ firewall-cmd --reload
 - [加速下载](https://github.moeyy.xyz/https://github.com/yajuhua/podcast2/releases/latest/download/podcast2-win-x64.zip)
 
 2. 双击启动
-![windows-start](../images/windows-start.jpg)
+![windows-start](../../images/windows-start.jpg)
 
 ## 使用macOS部署Podcast2
 1. 下载podcast2压缩包
@@ -54,7 +54,7 @@ chmod -R a+x platform
 > 默认用户名：admin <br>
 > 默认密码：123456
 
-![登录](../images/login.png)
+![登录](../../images/login.png)
 
 ## 安装插件
 > 项目默认是没有添加插件的，自行按需添加
@@ -69,21 +69,21 @@ chmod -R a+x platform
 
 
 1. 安装插件
-![安装插件](../images/installPlugin.png)
+![安装插件](../../images/installPlugin.png)
 
 2. 设置插件，如果有的话
-![设置插件](../images/setting.png)
+![设置插件](../../images/setting.png)
 
 ## 添加订阅
 > 以干净世界为例
 1. 复制主页链接
-![复制主页链接](../images/channelUrl.png)
+![复制主页链接](../../images/channelUrl.png)
 
 2. 粘贴并点击Add
-![添加订阅](../images/add.png)
+![添加订阅](../../images/add.png)
 
 3. 点击二维码
-![二维码](../images/QRcode.png)
+![二维码](../../images/QRcode.png)
 
 4. 扫描二维码添加到播客APP（如：AntennaPod）
 

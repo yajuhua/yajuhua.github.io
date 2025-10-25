@@ -64,6 +64,6 @@
 } 
 ```
 ### podcast2自定义附件域名
-![custom-domain-name](./images/custom-domain-name.png)
+![custom-domain-name](../images/custom-domain-name.png)
 
 
