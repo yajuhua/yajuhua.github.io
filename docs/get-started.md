@@ -32,6 +32,10 @@ firewall-cmd --reload
 2. 双击启动
 ![windows-start](_images/windows-start.jpg)
 
+运行中
+
+![running](_images/windows-runing.jpg)
+
 ## 使用macOS部署Podcast2
 1. 下载podcast2压缩包
 - [下载](https://github.com/yajuhua/podcast2/releases/latest/download/podcast2-osx-x64.zip) <br>

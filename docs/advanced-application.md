@@ -11,8 +11,6 @@
 > 5. **Swagger**：测试和调试 API 调用。
 
 ### 开启API文档
-![open-api](_images/open-api.png)
-### 生成apiToken
 所有 API 调用都需在header中加入apiToken
 ![apiToken](_images/apiToken.png)
 ### 请求示例
