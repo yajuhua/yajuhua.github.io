@@ -11,21 +11,20 @@
 > 5. **Swagger**：测试和调试 API 调用。
 
 ### 开启API文档
-![open-api](../images/open-api.png)
+![open-api](../_images/open-api.png)
 ### 生成apiToken
 所有 API 调用都需在header中加入apiToken
-![apiToken](../images/apiToken.png)
+![apiToken](../_images/apiToken.png)
 ### 请求示例
-![api-request-demo](../images/api-request-demo.png)
+![api-request-demo](../_images/api-request-demo.png)
 
 ## Telegram bot
 > **实验性功能**：此功能正在开发中，旨在更方便追加节目。请注意，功能可能不稳定。
 
 ### demo
-<video width="640" height="360" controls>
-  <source src="../videos/telegram-bot-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[Demo](_media/telegram-bot-demo.mp4 ':include :type=iframe width=80% height=600px')
+
+[//]:  # (参考https://yzqtpl.github.io/docsify-vitepress/embed-files.html#%E5%B5%8C%E5%85%A5%E7%9A%84%E7%B1%BB%E5%9E%8B)
 
 ## 添加订阅
 > 如果默认配置无法满足，可以看看下面。
@@ -64,6 +63,6 @@
 } 
 ```
 ### podcast2自定义附件域名
-![custom-domain-name](../images/custom-domain-name.png)
+![custom-domain-name](../_images/custom-domain-name.png)
 
 

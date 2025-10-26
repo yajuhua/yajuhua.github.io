@@ -11,21 +11,13 @@
 > 5. **Swagger**：测试和调试 API 调用。
 
 ### 开启API文档
-![open-api](../images/open-api.png)
+![open-api](_images/open-api.png)
 ### 生成apiToken
 所有 API 调用都需在header中加入apiToken
-![apiToken](../images/apiToken.png)
+![apiToken](_images/apiToken.png)
 ### 请求示例
-![api-request-demo](../images/api-request-demo.png)
+![api-request-demo](_images/api-request-demo.png)
 
-## Telegram bot
-> **实验性功能**：此功能正在开发中，旨在更方便追加节目。请注意，功能可能不稳定。
-
-### demo
-<video width="640" height="360" controls>
-  <source src="../videos/telegram-bot-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## 添加订阅
 > 如果默认配置无法满足，可以看看下面。
@@ -63,7 +55,19 @@
 	reverse_proxy localhost:8088
 } 
 ```
-### podcast2自定义附件域名
-![custom-domain-name](./images/custom-domain-name.png)
+
+## Crt和key 开启 HTTPS
+### 文件格式要求
+
+```shell
+# 证书文件格式必须是crt
+# 密钥文件格式必须是key
+# 重启后并以https访问
+```
+
+## Podcast2自定义附件域名
+> 开启HTTPS后必要设置
+> 
+![custom-domain-name](_images/custom-domain-name.png)
 
 

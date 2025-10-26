@@ -1,7 +1,7 @@
 ## 通用
 ### 插件提醒
 它一直都在的<br>
-![plugin-remind](../images/plugin-remind.png)
+![plugin-remind](../_images/plugin-remind.png)
 
 ## YouTube
 ### 支持链接
@@ -24,18 +24,18 @@ yt-dlp可能会出现[Sign in to confirm you’re not a bot. This helps protect 
 
 ### mp4扩展名
 更多选项（插件2.5.3+）
-![mp4扩展名](../images/mp4-ext.png)
+![mp4扩展名](../_images/mp4-ext.png)
 #### 使用cloudflare workers创建vless节点
 - 参考[cmliu/edgetunnel](https://github.com/cmliu/edgetunnel)
 - 参考[zizifn/edgetunnel](https://github.com/zizifn/edgetunnel)
 - 注意 workers.dev域名在国内是无法访问的
 
 #### v2raya开启局域网共享
-![局域网共享](../images/intranet-sharing.png)
+![局域网共享](../_images/intranet-sharing.png)
 
 #### 设置插件代理
-![共享端口](../images/intranet-sharing-2.png)
-![插件代理设置](../images/plugin-proxy-settting.png)
+![共享端口](../_images/intranet-sharing-2.png)
+![插件代理设置](../_images/plugin-proxy-settting.png)
 
 
 ## 哔哩哔哩
@@ -43,15 +43,15 @@ yt-dlp可能会出现[Sign in to confirm you’re not a bot. This helps protect 
 ### 浏览器获取cookie和ac_time_value
 #### 打开浏览器登录哔哩哔哩
 
-![登录哔哩哔哩](../images/b-login.png)
+![登录哔哩哔哩](../_images/b-login.png)
 
 #### 复制cookie
 
-![复制cookie](../images/b-cookie.png)
+![复制cookie](../_images/b-cookie.png)
 
 #### 复制ac_time_value
 
-![复制ac_time_value](../images/ac_time_value.png)
+![复制ac_time_value](../_images/ac_time_value.png)
 
 #### 注意
 

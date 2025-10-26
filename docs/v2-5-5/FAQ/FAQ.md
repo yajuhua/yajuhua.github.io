@@ -111,18 +111,18 @@ yajuhua/podcast2:latest
 
 ## 项目在线更新
 podcast2 v2.4.0开始支持在线更新，国内需要设置代理，也可以直接Github加速站。
-![设置GitHub加速站](../../images/githubProxy.jpg)
+![设置GitHub加速站](../_images/githubProxy.jpg)
 下载完成后重启即为新版本
 
 ## 插件列表无法加载
 插件列表的json数据是由cloudflare pages提供，可能存在无法访问的情况，下面有两个解决方法
 ### 1.更换插件仓库Url
 [https://plugin.lancarjaya.eu.org/metadata.json](https://plugin.lancarjaya.eu.org/metadata.json)
-![自定义插件仓库Url](../../images/customzePluginRepo.jpg)
+![自定义插件仓库Url](../_images/customzePluginRepo.jpg)
 ### 2.上传本地插件
 [下载插件](https://github.com/yajuhua/generate-plugin-metadata-action/tree/master/v2)<br>
 上传插件
-![上传插件](../../images/uploadPlugin.jpg)
+![上传插件](../_images/uploadPlugin.jpg)
 ## 插件bug或失效
 
 由于插件并非使用官方接口，存在不稳定性。若发现插件失效，请提交[issues](https://github.com/yajuhua/podcast2/issues/new?assignees=&labels=bug&projects=&template=bug-report.yaml)
