@@ -65,7 +65,7 @@
 # 重启后并以https访问
 ```
 
-## Podcast2自定义附件域名
+## 自定义附件域名
 > 开启HTTPS后必要设置
 > 
 ![custom-domain-name](_images/custom-domain-name.png)

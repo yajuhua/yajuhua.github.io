@@ -6,7 +6,7 @@
 ![plugin-remind](_images/plugin-remind.png)
 
 ## YouTube
-### 支持链接
+### 支持链接格式
 - https://www.youtube.com/@laogao/videos
 - https://www.youtube.com/@laogao/streams
 
@@ -59,7 +59,7 @@ yt-dlp可能会出现[Sign in to confirm you’re not a bot. This helps protect 
 
 #### 注意
 
-这样子相当于登录了，复制后要清理哔哩哔哩浏览器记录，否则会与本插件冲突。
+这样子相当于登录了，复制后要**清理**哔哩哔哩浏览器记录，否则会与本插件冲突。
 
 ### 在线获取cookie和ac_time_value
 [https://b-login.vercel.app/](https://b-login.vercel.app/)
