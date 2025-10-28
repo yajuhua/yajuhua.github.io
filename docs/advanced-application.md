@@ -87,7 +87,7 @@
 ## 自定义XML标签
 > 可能有些客户端无法解析Podcast2默认的XML标签，这时可以考虑自定义标签试一下，目前该功能还在`实验阶段`。
 >
-### 必须按如下结构
+### 结构要求
 ```json
 {
   "confList": [
@@ -102,6 +102,14 @@
   ]
 }
 ```
+### 属性与文本内容
+> `_attr` 和`_text` 是分别设置标签属性与文本内容的。
+>
+![_attr-and-_text](_images/custom-xml-attr-and-text.jpg)
+
+### 变量引用
+> 引用方式`{字段名}`，支持字段请看：[Channel](https://github.com/yajuhua/podcast2API/blob/master/src/main/java/io/github/yajuhua/podcast2API/Channel.java) 
+> 和 [Item](https://github.com/yajuhua/podcast2API/blob/master/src/main/java/io/github/yajuhua/podcast2API/Item.java)
 ### 示例配置文件
 ```json
 {
@@ -178,44 +186,18 @@
 }
 ```
 
-### 对应XML(注释)
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" encoding="UTF-8" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-	<channel>
-		<title><![CDATA[ 这是订阅主页名称 ]]></title>
-		<pubDate>更新时间</pubDate>
-		<language>zh-CN</language>			
-        <link><![CDATA[ 主页链接 ]]></link>
-		<itunes:image href="主页封面链接"/>
-		<description><![CDATA[ 这是一段描述 ]]></description>
-		<itunes:author><![CDATA[ null ]]></itunes:author>
-		<itunes:category text="null"/>
-	<item>
-		<pubDate>Sun, 26 Oct 2025 21:9:32 +0800</pubDate>
-		<title><![CDATA[ 这是一期节目标题  ]]></title>
-		<link><![CDATA[ 这一期节目链接 ]]></link>
-		<enclosure url="这一期节目链接"  type="audio/m4a"/>
-		<itunes:duration>节目时长</itunes:duration>
-		<description><![CDATA[ 这是一段描述 ]]></description>
-		<itunes:image href="这期节目封面"/>
-	</item>
-	</channel>
-</rss>
-```
 
-### 对应XML(真实)
+### 对应XML
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" encoding="UTF-8" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 	<channel>
 		<title><![CDATA[ 音樂 Music - NUVS ]]></title>
 		<pubDate>Sun, 26 Oct 2025 21:9:32 +0800</pubDate>
-		<language>zh-CN</language>			<link><![CDATA[ https://www.ganjingworld.com/zh-CN/channel/1fjrhcmij2n43KxCh1HPGLLjB1c10c?tab=videos ]]></link>
+		<language>zh-CN</language>			
+        <link><![CDATA[ https://www.ganjingworld.com/zh-CN/channel/1fjrhcmij2n43KxCh1HPGLLjB1c10c?tab=videos ]]></link>
 		<itunes:image href="https://image5-us-west.cloudokyo.cloud/image/v1/ad/84/53/ad8453f1-afb2-4482-8925-00832e4060e3/672.webp"/>
-		<description><![CDATA[ Music Sharing Channel, Saving and Sharing the Worldwide Music
-此頻道意在保留和分享來自全球的音樂。
-Sharing by NUVS 新寰宇視覺工作室 ]]></description>
+		<description><![CDATA[ Music Sharing Channel, Saving and Sharing the Worldwide Music]]></description>
 		<itunes:author><![CDATA[ null ]]></itunes:author>
 		<itunes:category text="null"/>
 	<item>
