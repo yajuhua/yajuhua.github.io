@@ -194,7 +194,6 @@
 	<channel>
 		<title><![CDATA[ 音樂 Music - NUVS ]]></title>
 		<pubDate>Sun, 26 Oct 2025 21:9:32 +0800</pubDate>
-		<language>zh-CN</language>			
         <link><![CDATA[ https://www.ganjingworld.com/zh-CN/channel/1fjrhcmij2n43KxCh1HPGLLjB1c10c?tab=videos ]]></link>
 		<itunes:image href="https://image5-us-west.cloudokyo.cloud/image/v1/ad/84/53/ad8453f1-afb2-4482-8925-00832e4060e3/672.webp"/>
 		<description><![CDATA[ Music Sharing Channel, Saving and Sharing the Worldwide Music]]></description>
