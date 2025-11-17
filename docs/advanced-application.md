@@ -11,21 +11,11 @@
 > 5. **Swagger**：测试和调试 API 调用。
 
 ### 开启API文档
-![open-api](../images/open-api.png)
-### 生成apiToken
 所有 API 调用都需在header中加入apiToken
-![apiToken](../images/apiToken.png)
+![apiToken](_images/apiToken.png)
 ### 请求示例
-![api-request-demo](../images/api-request-demo.png)
+![api-request-demo](_images/api-request-demo.png)
 
-## Telegram bot
-> **实验性功能**：此功能正在开发中，旨在更方便追加节目。请注意，功能可能不稳定。
-
-### demo
-<video width="640" height="360" controls>
-  <source src="../videos/telegram-bot-demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## 添加订阅
 > 如果默认配置无法满足，可以看看下面。
@@ -63,7 +53,164 @@
 	reverse_proxy localhost:8088
 } 
 ```
-### podcast2自定义附件域名
-![custom-domain-name](./images/custom-domain-name.png)
+
+## Crt和key 开启 HTTPS
+### 文件格式要求
+
+```shell
+# 证书文件格式必须是crt
+# 密钥文件格式必须是key
+# 重启后并以https访问
+```
+
+## 自定义附件域名
+> 开启HTTPS后必要设置
+> 
+![custom-domain-name](_images/custom-domain-name.png)
+
+## 上传与下载
+### 编辑重新下载配置
+> 有些时候下载失败可能是没有可用下载格式，需要重新配置下载。
+> 
+![编辑重新下载配置](_images/edit-re-download-conf.jpg)
+
+## Cron表达式
+> 订阅默认是按间隔秒数更新的
+> 
+![Cron表达式](_images/cron-expression.jpg)
+
+## yt-dlp 更新至不同分支
+> 可以快速更新至修复bug的分支， 默认是`@latest`最新稳定版的。详细请参考：https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#update
+>
+![默认是更新至最新稳定版](_images/yt-dlp-update-diff-branch.jpg)
+
+## 自定义XML标签
+> 可能有些客户端无法解析Podcast2默认的XML标签，这时可以考虑自定义标签试一下，目前该功能还在`实验阶段`。
+>
+### 结构要求
+```json
+{
+  "confList": [
+    {
+      "name": "配置名称",
+      "conf": {
+        "rss": {},
+        "channel": {},
+        "item": {}
+      }
+    }
+  ]
+}
+```
+### 属性与文本内容
+> `_attr` 和`_text` 是分别设置标签属性与文本内容的。
+>
+![_attr-and-_text](_images/custom-xml-attr-and-text.jpg)
+
+### 变量引用
+> 引用方式`{字段名}`，支持字段请看：[Channel](https://github.com/yajuhua/podcast2API/blob/master/src/main/java/io/github/yajuhua/podcast2API/Channel.java) 
+> 和 [Item](https://github.com/yajuhua/podcast2API/blob/master/src/main/java/io/github/yajuhua/podcast2API/Item.java)
+### 示例配置文件
+```json
+{
+  "confList": [
+    {
+      "name": "default",
+      "conf": {
+        "rss": {
+          "_attr": {
+            "xmlns:atom": "http://www.w3.org/2005/Atom",
+            "xmlns:itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
+            "version": "2.0",
+            "encoding": "UTF-8"
+          }
+        },
+        "channel": {
+          "title": {
+            "_text": "<![CDATA[ {title} ]]>"
+          },
+          "pubDate": {
+            "_text": "{latestPubDate}"
+          },
+          "link": {
+            "_text": "<![CDATA[ {link} ]]>"
+          },
+          "itunes:image": {
+            "_attr": {
+              "href": "{image}"
+            }
+          },
+          "description": {
+            "_text": "<![CDATA[ {description} ]]>"
+          },
+          "itunes:author": {
+            "_text": "<![CDATA[ {title} ]]>"
+          },
+          "itunes:category": {
+            "_attr": {
+              "text": "null"
+            }
+          }
+        },
+        "item": {
+          "title": {
+            "_text": "<![CDATA[ {title} ]]>"
+          },
+          "pubDate": {
+            "_text": "{publicTime}"
+          },
+          "link": {
+            "_text": "<![CDATA[ {link} ]]>"
+          },
+          "enclosure": {
+            "_attr": {
+              "url": "{enclosure}",
+              "type": "{type}"
+            }
+          },
+          "itunes:duration": {
+            "_text": "{duration}"
+          },
+          "itunes:image": {
+            "_attr": {
+              "href": "{image}"
+            }
+          },
+          "description": {
+            "_text": "<![CDATA[ {description} ]]>"
+          }
+        }
+      }
+    }
+  ]
+}
+```
+
+
+### 对应XML
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" encoding="UTF-8" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+	<channel>
+		<title><![CDATA[ 音樂 Music - NUVS ]]></title>
+		<pubDate>Sun, 26 Oct 2025 21:9:32 +0800</pubDate>
+        <link><![CDATA[ https://www.ganjingworld.com/zh-CN/channel/1fjrhcmij2n43KxCh1HPGLLjB1c10c?tab=videos ]]></link>
+		<itunes:image href="https://image5-us-west.cloudokyo.cloud/image/v1/ad/84/53/ad8453f1-afb2-4482-8925-00832e4060e3/672.webp"/>
+		<description><![CDATA[ Music Sharing Channel, Saving and Sharing the Worldwide Music]]></description>
+		<itunes:author><![CDATA[ null ]]></itunes:author>
+		<itunes:category text="null"/>
+	<item>
+		<pubDate>Sun, 26 Oct 2025 21:9:32 +0800</pubDate>
+		<title><![CDATA[ 至少我还记得 At Least I Remember｜Eric周兴哲  ]]></title>
+		<link><![CDATA[ https://www.ganjingworld.com/video/1i1s6h6ncp01spMBiXqoxY8r61nc1c ]]></link>
+		<enclosure url="http://127.0.0.1:8088/resources/e85d4983-d023-4562-b30d-8cfff5a7d35f.m4a"  type="audio/m4a"/>
+		<itunes:duration>00:05:03</itunes:duration>
+		<description><![CDATA[  ]]></description>
+		<itunes:image href="https://image5-us-west.cloudokyo.cloud/image/v3/8a/15/6a/8a156acd-1757-49d4-8e7b-876be289e0e2/672.webp"/>
+	</item>
+	</channel>
+</rss>
+```
+
 
 
