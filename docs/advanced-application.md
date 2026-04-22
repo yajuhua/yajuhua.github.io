@@ -76,8 +76,13 @@
 
 ## Cron表达式
 > 订阅默认是按间隔秒数更新的
-> 
+>
+> `v2.7.0`版本开始使用`Unix Cron`，之前的版本是使用`Quartz Cron`，而它们两者表达式的互不通用的。
+>
 ![Cron表达式](_images/cron-expression.jpg)
+- 如果是`v2.7.0`之前的版本，直接按上图配置就可以了。
+- 如果是`v2.7.0`之后的版本比如`v2.7.4`,不要设置`秒`和`年`这两个字段，如下图。
+![Quartz-to-Unix-Cron](_images/quartz-to-unix-cron.png)
 
 ## yt-dlp 更新至不同分支
 > 可以快速更新至修复bug的分支， 默认是`@latest`最新稳定版的。详细请参考：https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#update

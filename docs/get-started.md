@@ -25,30 +25,13 @@ yajuhua/podcast2:latest
 firewall-cmd --add-port=8088/tcp --permanent
 firewall-cmd --reload
 ````
-## 使用Windows部署Podcast2
-1. 下载podcast2压缩包
-- [下载](https://github.com/yajuhua/podcast2/releases/latest/download/podcast2-win-x64.zip)
+## ~使用Windows部署Podcast2~
+该版本已不再维护，推荐使用`Docker`部署。
 
-2. 双击启动
-![windows-start](_images/windows-start.jpg)
 
-运行中
+## ~使用macOS部署Podcast2~
+该版本已不再维护，推荐使用`Docker`部署。
 
-![running](_images/windows-runing.jpg)
-
-## 使用macOS部署Podcast2
-1. 下载podcast2压缩包
-- [下载](https://github.com/yajuhua/podcast2/releases/latest/download/podcast2-osx-x64.zip) <br>
-2. 解压得到 platform文件夹
-3. 赋执行权限
-````shell
-chmod -R a+x platform
-````
-4. 启动
-````shell
-#进入platform/osx
-./start.sh
-````
 ## 进入面板
 
 > 默认访问地址 [http://你的IP地址:8088]()
